@@ -7,18 +7,21 @@ class String
   end
 
   def question?
-    self.end_with?("?")
+    self.end_with?('?')
   end
 
   def exclamation?
-    self.end_with?("!")
+    self.end_with?('!')
   end
 
   def count_sentences
-    # TODO : figure out the condition for this
-    #WHAT IS THE SPECIFIC CONDITION FOR THIS SPLIT
-   self.split
-   
-  other = sentence.count
+    # my answer
+    # count = self.split(/[?.!]/)
+    # count.length
+
+    #copied answer
+    array = self.split(/[?.!]/)
+    n_array = array.reject { |string| string.empty? }
+    n_array.length
   end
 end
